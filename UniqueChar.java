@@ -45,8 +45,9 @@ public class UniqueChar {
 		boolean[] charArray = new boolean[256];
 		for (int i = 0 ; i< 256 ; i++){
 			charArray[i] = false; 
-		}	
+		}
 		
+		//getting the ASCII number for each char in our string 
 		for (int i = 0; i <= s.length()-1; i++) {
 			int index = (int) s.charAt(i);
 			
