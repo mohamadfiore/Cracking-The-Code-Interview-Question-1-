@@ -7,8 +7,7 @@ public class UniqueChar {
 
 		/* part1: implement an algorithm to determine if a string has all unique
 		 characters. What if you can not use additional data structures? 
-		3 methods implemented to solve this problems with different complexity. 
-	https://www.geeksforgeeks.org/determine-string-unique-characters/   */
+		3 methods implemented to solve this problems with different complexity. */
 
 	
 	//O(n^2)
@@ -50,8 +49,8 @@ public class UniqueChar {
 		for (int i = 0; i <= s.length()-1; i++) {
 			int index = (int) s.charAt(i);
 			
-			 /* If the value is already true, string
-	        has duplicate characters, return false */
+			 /* If the value is already there, return false */
+	      
 			if (charArray[index] == true)
 				return false;
 
