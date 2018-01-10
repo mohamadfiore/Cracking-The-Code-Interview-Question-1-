@@ -10,7 +10,7 @@ public class UniqueChar {
 		3 methods implemented to solve this problems with different complexity. */
 
 	
-	//O(n^2)
+	//O(n^2) complexity
 	public static boolean uniqueChar(String s) {
 
 		for (int i = 0; i <= s.length() - 1; i++) {
@@ -21,7 +21,7 @@ public class UniqueChar {
 		}
 		return true;
 	}
-	// What if you can not use additional data structures? (nLogn)
+	// What if you can not use additional data structures? (nLogn) complexity
 
 	public static boolean uniqueCharAscii(String s) {
 		/*
@@ -39,12 +39,13 @@ public class UniqueChar {
 		return true;
 	}
 
-//O(n)
+//O(n) complexity 
 	public static boolean uniqueChar256(String s) {
 		// put all the 256 bit to false
 		boolean[] charArray = new boolean[256];
-		Arrays.fill(charArray, false);
-		
+		for (int i = 0 ; i< 256 ; i++){
+			charArray[i] = false; 
+		}	
 		
 		for (int i = 0; i <= s.length()-1; i++) {
 			int index = (int) s.charAt(i);
