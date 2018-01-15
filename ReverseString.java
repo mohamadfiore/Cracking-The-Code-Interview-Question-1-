@@ -1,3 +1,4 @@
+package oneToFive;
 
 import java.util.*;
 
@@ -6,37 +7,41 @@ import java.util.*;
 five characters, including the null character.)*/
 public class Reverse {
 
+	//Using a void function
 	public static void reverse(String s) {
 		char[] charArray = new char[s.length()];
 
 		for (int i = s.length() - 1; i >= 0; i--) {
 
-			charArray[i] = s.charAt(i);
+			charArray[s.length()-i-1] = s.charAt(i);
 		}
-		System.out.println();
 
 		for (char tmp : charArray) {
 			System.out.print(tmp);
 		}
+		System.out.println();
 
 	}
 
+	// Using two data structures
 	public static String reverseString(String s) {
+		// put the string char to char array
 		char[] charArray = s.toCharArray();
-		char temp;
-		for (int i = 0; i < s.length() - 1; i++) {
-			temp = charArray[i];
-			charArray[i] = charArray[s.length() - 1 - i];
-			charArray[s.length() - 1 - i] = temp;
+		char[] temp = new char[s.length()];
 
+		for (int i = 0; i < s.length(); i++) {
+			temp[i] = charArray[s.length() - 1 - i];
+			System.out.print(temp[i]);
 		}
 
-		String sReverse = new String(charArray);
+		String sReverse = new String(temp);
 		return sReverse;
 	}
 
 	public static void main(String[] args) {
-		System.out.print(reverseString("Hello"));
+		reverse("Test Example1");
+		reverseString("Hello");
+
 	}
 
 }
