@@ -1,4 +1,4 @@
-package oneToFive;
+
 
 /*Write code to reverse a C-Style String. 
 (C-String means that “abcd” is represented as  
@@ -53,11 +53,6 @@ public class Reverse {
 		return sReverse;
 	}
 
-	public static void main(String[] args) {
-		reverse("Jamal");
-		System.out.println(reverseString("Oliver"));
-		System.out.print(reverseString1("Mohammad"));
-
-	}
+	
 
 }
