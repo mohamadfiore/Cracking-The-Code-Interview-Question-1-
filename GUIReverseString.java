@@ -8,7 +8,7 @@ public class GUIReverseString extends JFrame {
 
 	private JLabel labelObj;
 	private JLabel labelResultObj;
-	private ReverseString reverseStringObj;
+	private Reverse reverseStringObj;
 
 	private Container contentPane;
 	private JButton buttonObj;
@@ -36,7 +36,7 @@ public class GUIReverseString extends JFrame {
 		textFieldObj = new JTextField(8);
 		mainPanel.add(textFieldObj);
 
-		reverseStringObj = new ReverseString();
+		reverseStringObj = new Reverse();
 
 		buttonObj = new JButton("Reverse it!");
 		buttonObj.addActionListener(new ButtonListener());
@@ -49,7 +49,7 @@ public class GUIReverseString extends JFrame {
 	private class ButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent event) {
 			String s = textFieldObj.getText();
-			labelResultObj.setText(ReverseString.reverseString1(s));
+			labelResultObj.setText(Reverse.reverseString1(s));
 			buttonObj.setEnabled(false);
 		}
 	}
